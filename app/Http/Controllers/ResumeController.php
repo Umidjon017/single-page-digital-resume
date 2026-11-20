@@ -13,13 +13,30 @@ class ResumeController extends Controller
     public function index(Factory $view)
     {
         $resumeData = Cache::remember('resume_data_v2', now()->addDay(), function (): array {
-                $json = Storage::disk('resumes')->get('resume.json');
+            $json = Storage::disk('resumes')->get('resume.json');
 
-                return json_decode($json,true, flags: JSON_THROW_ON_ERROR);
-            });
+            return json_decode($json, true, flags: JSON_THROW_ON_ERROR);
+        });
 
         $resume = Resume::fromArray($resumeData);
 
         return $view->make('resume', ['resume' => $resume]);
+    }
+
+    public function download()
+    {
+        $resumeData = Cache::remember('resume_data_v2', now()->addDay(), function (): array {
+            $json = Storage::disk('resumes')->get('resume.json');
+
+            return json_decode($json, true, flags: JSON_THROW_ON_ERROR);
+        });
+
+        $resume = Resume::fromArray($resumeData);
+
+        $pdf = Pdf::loadView('resume-pdf', ['resume' => $resume])
+            ->setPaper('a4', 'portrait')
+            ->setOption('isRemoteEnabled', true);
+
+        return $pdf->download($resume->basics->name.' Resume.pdf');
     }
 }
