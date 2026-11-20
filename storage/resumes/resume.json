@@ -1,27 +1,27 @@
 {
     "basics": {
-        "name": "John Wick",
-        "label": "Senior Full-Stack Developer & Bug Exterminator",
+        "name": "Umidjon Kobiljonov",
+        "label": "Middle Full-Stack Developer",
         "image": "https://images.unsplash.com/photo-1644004680400-b9425e4efa18?q=80&w=2819&auto=format&fit=crop",
-        "email": "john.wick@example.com",
-        "phone": "(555) REVENGE",
+        "email": "qobiljonovumidjon@gmail.com",
+        "phone": "+8257333322",
         "url": "https://example.com/johnwick",
         "summary": "Legendary full-stack developer with an exceptional track record of eliminating bugs, crushing deadlines, and delivering flawless code. Known for my relentless pursuit of clean architecture and my ability to debug the most complex systems. I don't just write code - I craft digital masterpieces. Retired from the underground hacking scene, now focusing on legitimate software development. Warning: Do not touch my rubber duck debugger.",
         "location": {
             "address": "The Continental Hotel",
             "postalCode": "10001",
-            "city": "New York",
-            "countryCode": "US",
-            "region": "NY"
+            "city": "Wonju",
+            "countryCode": "SK",
+            "region": "Kyongi-do, SK"
         },
         "profiles": [{
             "network": "GitHub",
-            "username": "johnwick",
-            "url": "https://github.com"
+            "username": "Umidjon017",
+            "url": "https://github.com/Umidjon017"
         }, {
             "network": "LinkedIn",
-            "username": "john-wick-dev",
-            "url": "https://linkedin.com"
+            "username": "umidjon-kobiljonov",
+            "url": "https://linkedin.com/umidjon-kobiljonov"
         }, {
             "network": "Stack Overflow",
             "username": "baba-yaga-codes",
